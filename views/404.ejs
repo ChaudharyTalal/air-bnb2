@@ -1,0 +1,38 @@
+<%- include('partials/head') %>
+
+</head>
+<body class="bg-gradient-to-br from-amber-50 via-white to-amber-50 min-h-screen flex flex-col">
+    <!-- Header -->
+       <%- include('partials/nav') %>
+
+
+    <!-- 404 Content -->
+    <main class="flex-1 flex items-center justify-center p-6">
+        <div class="text-center max-w-md">
+            <div class="mb-8">
+                <div class="w-24 h-24 bg-gradient-to-r from-red-500 to-red-600 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg">
+                    <i class="fas fa-exclamation-triangle text-white text-3xl"></i>
+                </div>
+                <h1 class="text-6xl font-extrabold text-red-600 mb-4">404</h1>
+                <p class="text-xl text-gray-700 mb-6">Oops! Page Not Found</p>
+                <p class="text-gray-600 mb-8">The page you're looking for doesn't exist or has been moved.</p>
+            </div>
+            
+            <div class="space-y-4">
+                <a href="/" class="inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r from-amber-500 to-amber-600 text-white font-semibold rounded-xl hover:from-amber-600 hover:to-amber-700 transition-all duration-200 transform hover:scale-105 hover:shadow-lg space-x-2">
+                    <i class="fas fa-home"></i>
+                    <span>Go Home</span>
+                </a>
+                
+                <div class="text-center">
+                    <a href="/host/add-home" class="text-amber-600 hover:text-amber-700 font-medium transition-colors duration-200 flex items-center justify-center space-x-2">
+                        <i class="fas fa-plus-circle"></i>
+                        <span>Add Your Property</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+</body>
+</html>

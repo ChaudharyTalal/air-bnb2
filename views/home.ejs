@@ -1,0 +1,37 @@
+<%- include('partials/head') %>
+</head>
+<%- include('partials/nav') %>
+
+<body class="bg-gradient-to-br from-amber-50 via-white to-amber-50 min-h-screen">
+
+ 
+
+    <main>
+        <div class="text-center py-12">
+            <div class="w-20 h-20 bg-gradient-to-r from-amber-500 to-amber-600 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg">
+                <i class="fas fa-home text-white text-3xl"></i>
+            </div>
+            <h2 class="text-5xl font-bold text-gray-800 mb-4 bg-gradient-to-r from-amber-600 to-amber-700 bg-clip-text text-transparent">
+                Welcome to AirBNB
+            </h2>
+            <p class="text-xl text-gray-600 leading-relaxed max-w-2xl mx-auto">Discover amazing properties from our community of hosts around the world</p>
+        </div>
+        <ul class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 p-6">
+            <% registerHomes.forEach(home=>{%>
+                <li class="bg-white rounded-2xl shadow-lg p-6 hover:shadow-xl transition-all duration-300 transform hover:scale-105 border border-gray-100">
+                    <div class="flex items-center space-x-4">
+                        <div class="w-12 h-12 bg-gradient-to-r from-amber-500 to-amber-600 rounded-full flex items-center justify-center">
+                            <i class="fas fa-home text-white"></i>
+                        </div>
+                        <h4 class="font-bold text-gray-800 text-lg"><%= home.houseName %></h4>
+                    </div>
+                </li>
+          <%  }) %>
+        </ul>
+    </main>
+
+
+
+</body>
+
+</html>

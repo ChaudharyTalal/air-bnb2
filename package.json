@@ -1,0 +1,24 @@
+{
+  "dependencies": {
+    "@tailwindcss/cli": "^4.1.12",
+    "body-parser": "^2.2.0",
+    "ejs": "^3.1.10",
+    "express": "^5.1.0",
+    "tailwindcss": "^4.1.12"
+  },
+  "name": "lecture-10-express-js-deep-dive",
+  "version": "1.0.0",
+  "description": "",
+  "main": "practice2.js",
+  "type": "commonjs",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "concurrently \"nodemon app.js\" \"npx @tailwindcss/cli -i ./views/input.css -o ./public/output.css --watch\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^9.2.1"
+  }
+}
