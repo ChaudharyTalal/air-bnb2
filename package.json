@@ -4,7 +4,10 @@
     "body-parser": "^2.2.0",
     "ejs": "^3.1.10",
     "express": "^5.1.0",
-    "tailwindcss": "^4.1.12"
+    "gsap": "^3.13.0",
+    "locomotive-scroll": "^4.1.4",
+    "tailwindcss": "^4.1.12",
+    "three": "^0.181.0"
   },
   "name": "lecture-10-express-js-deep-dive",
   "version": "1.0.0",
@@ -19,6 +22,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "concurrently": "^9.2.1"
+    "concurrently": "^9.2.1",
+    "nodemon": "^3.1.10"
   }
 }
