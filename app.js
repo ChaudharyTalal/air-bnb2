@@ -5,6 +5,7 @@ const express = require("express");
 //local Router
 const userRouter = require("./routes/userRouter");
 const {hostRouter} = require("./routes/hostRouter");
+const portfolioRouter = require("./routes/portfolioRouter");
 // Get the project root directory directly from app.js
 const rootDir = __dirname;
 
@@ -21,6 +22,7 @@ app.set('views', path.join(rootDir, 'views'))
 
 
 app.use(express.urlencoded());
+app.use(portfolioRouter);
 app.use(userRouter);
 app.use("/host", hostRouter);
 
