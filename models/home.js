@@ -28,20 +28,17 @@ module.exports = class Home {
     static fetchAll(cb) {
         const homeDataPath = path.join(rootDir, 'data', 'homes.json')
         fs.readFile(homeDataPath, (err, data) => {
-
             if (err) {
-                return []
-            }
-            else {
-                try {
-                    cb(JSON.parse(data))
-
-                } catch (e) {
-                    return cb([])
-                }
+                console.error('Failed to read homes data:', err)
+                return cb([])
             }
 
-
+            try {
+                cb(JSON.parse(data))
+            } catch (e) {
+                console.error('Failed to parse homes data:', e)
+                return cb([])
+            }
         })
     }
 }
