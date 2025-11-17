@@ -23,6 +23,14 @@ app.use('/admin',adminRouter)
 
 app.use(notfound)
 
-// Export the app for serverless platforms (e.g., Vercel)
-module.exports = app;
 
+
+const port = process.env.PORT || 1001;
+
+if (require.main === module) {
+    app.listen(port, () => {
+        console.log(`Server running at http://localhost:${port}`)
+    })
+}
+
+module.exports = app;

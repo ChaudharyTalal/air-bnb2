@@ -4,7 +4,7 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-      "dev": "node app.js",
+    "dev": "node app.js",
     "start": "node app.js",
     "build": "npx @tailwindcss/cli -i ./views/input.css -o ./public/output.css",
     "build:css:watch": "npx @tailwindcss/cli -i ./views/input.css -o ./public/output.css --watch"
