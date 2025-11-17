@@ -1,25 +1,70 @@
-   <!-- Header -->
-    <header class="bg-white/90 backdrop-blur shadow-lg p-6 flex justify-between items-center sticky top-0 z-50">
-        <div class="flex items-center space-x-3">
-            <div
-                class="w-10 h-10 bg-gradient-to-r from-amber-500 to-amber-600 rounded-full flex items-center justify-center">
-                <i class="fas fa-home text-white text-lg"></i>
+<style>
+    /* nav-link base */
+    .nav-link {
+        position: relative;
+        display: inline-block;
+        padding: 0.25rem 0;
+        font-weight: 500;
+        color: #374151; /* gray-700 */
+        transition: color 0.3s ease;
+    }
+
+    /* Underline effect */
+    .nav-link::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: -4px;
+        width: 0;
+        height: 2px;
+        background-color: transparent;
+        transition: all 0.3s ease;
+    }
+
+    /* Hover */
+    .nav-link:hover {
+        color: #f59e0b; /* amber-500 */
+    }
+
+    .nav-link:hover::after {
+        width: 100%;
+        background-color: #f59e0b;
+    }
+
+    /* Active */
+    .nav-link.active {
+        color: #f59e0b;
+    }
+
+    .nav-link.active::after {
+        width: 100%;
+        background-color: #f59e0b;
+    }
+
+
+</style>
+
+<nav class="bg-white shadow-md sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-6">
+        <div class="flex justify-between items-center h-20">
+            
+            <!-- Logo -->
+            <div class="flex items-center">
+                <a href="/" class="flex items-center gap-2">
+                    <span class="text-3xl font-bold text-amber-500">Airbnb</span>
+                </a>
             </div>
-            <h1 class="text-3xl font-bold bg-gradient-to-r from-amber-600 to-amber-700 bg-clip-text text-transparent">
-                AirBNB</h1>
-        </div>
-        <nav>
-            <ul class="flex space-x-6">
-                <li><a href="/"
-                        class="text-amber-700 font-semibold border-b-2 border-amber-700 pb-1 flex items-center space-x-2">
-                        <i class="fas fa-home"></i>
-                        <span>Home</span>
-                    </a></li>
-                <li><a href="/host/add-home"
-                        class="text-gray-700 hover:text-amber-700 font-medium transition-all duration-200 hover:scale-105 flex items-center space-x-2">
-                        <i class="fas fa-plus-circle"></i>
-                        <span>Add Home</span>
-                    </a></li>
+
+            <!-- Desktop nav-links -->
+            <ul class="hidden md:flex items-center space-x-8 list-none">
+                <li class="<%= (currpage === 'index') ? 'nav-link active' : 'nav-link' %>"><a href="/">Home</a></li>
+                <li class="<%= (currpage === 'homes') ? 'nav-link active' : 'nav-link' %>"><a href="/home-list">Home List</a></li>
+                <li class="<%= (currpage === 'bookings') ? 'nav-link active' : 'nav-link' %>"><a href="/bookings">Bookings</a></li>
+                <li class="<%= (currpage === 'reserve') ? 'nav-link active' : 'nav-link' %>"><a href="/reserve">Reserve</a></li>
+                <li class="<%= (currpage === 'fav-list') ? 'nav-link active' : 'nav-link' %>"><a href="/fav-list">My Favourites</a></li>
+                <li class="<%= (currpage === 'add-home') ? 'nav-link active' : 'nav-link' %>"><a href="/admin/add-home">Add Home</a></li>
+                <li class="<%= (currpage === 'admin-homes') ? 'nav-link active' : 'nav-link' %>"><a href="/admin/admin-homes">Admin Homes</a></li>
             </ul>
-        </nav>
-    </header>
+        </div>
+    </div>
+</nav>

@@ -1,0 +1,34 @@
+<%-include('../partials/head')%>
+
+
+</head>
+<body>
+
+    
+   <%-include('../partials/nav')%>
+
+
+    <section class="">
+
+        <form action="/admin/add-Home" method="post" class="flex flex-col gap-4 max-w-md mx-auto mt-10 p-6 bg-white rounded-lg shadow-md">
+            <label for="houseName" class="text-lg font-medium text-gray-700">Enter your House Name</label>
+            <input required type="text" id="houseName" name="houseName" class="border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-amber-400" placeholder="House Name">
+
+            <label for="location" class="text-lg font-medium text-gray-700">Enter the location</label>
+            <input required type="text" id="location" name="location" class="border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-amber-400" placeholder="Enter the House location">
+
+            <label for="price" class="text-lg font-medium text-gray-700">Enter the price</label>
+            <input  required type="number" id="price" name="price" class="border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-amber-400" placeholder="Enter the price per Night">
+
+            <label for="pic" class="text-lg font-medium text-gray-700">Enter the link of picture</label>
+            <input required type="text" id="pic" name="url" class="border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-amber-400" placeholder="Add PIC URL">
+
+            <label for="rating" class="text-lg font-medium text-gray-700">Enter the rating</label>
+            <input min="1" max="5" required type="number" id="rating" name="rating" class="border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-amber-400" placeholder="Rating 1 - 5 "> 
+
+            <button type="submit" class="mt-4 bg-amber-500 text-white px-6 py-2 rounded-md hover:bg-amber-600 transition">Submit</button>
+        </form>
+    </section>
+    
+</body>
+</html>
